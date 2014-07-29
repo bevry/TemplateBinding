@@ -1,8 +1,8 @@
 {
-  "name": "mdv",
+  "name": "templatebinding",
   "version": "0.0.0",
-  "description": "ERROR: No README.md file found!",
-  "main": "grunt.js",
+  "description": "Polymer's template binding polyfill. Concatenated and minified.",
+  "main": "TemplateBinding.min.js",
   "directories": {
     "doc": "docs",
     "test": "tests"
@@ -12,22 +12,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Polymer/mdv.git"
+    "url": "https://github.com/Polymer/TemplateBinding.git"
   },
-  "author": "",
-  "license": "Apache License 2.0",
-  "gitHead": "cdd89f1fb6273ede781c9e00a512720df1adffff",
+  "author": "Google Inc, Published by Benjamin Lupton <b@lupton.cc> (http://balupton.com)",
   "devDependencies": {
     "chai": "*",
-    "mocha": ">=1.9",
     "grunt": "*",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "^0.5.1",
     "grunt-karma": "*",
-    "karma-mocha": "*",
+    "handlebars": "*",
+    "karma-crbot-reporter": "*",
     "karma-ie-launcher": "*",
+    "karma-mocha": "*",
     "karma-safari-launcher": "*",
     "karma-script-launcher": "*",
-    "karma-crbot-reporter": "*",
-    "handlebars": "*",
-    "grunt-contrib-concat": "~0.3.0"
+    "mocha": ">=1.9"
   }
 }

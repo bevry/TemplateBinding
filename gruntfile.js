@@ -23,8 +23,16 @@ module.exports = function(grunt) {
     concat: {
       modules: {
         src: grunt.file.readJSON('build.json'),
-        dest: 'TemplateBinding.min.js',
+        dest: 'TemplateBinding.js',
         nonull: true
+      }
+    },
+    uglify: {
+      options: {},
+      TemplateBinding: {
+        files: {
+          'TemplateBinding.min.js': ['TemplateBinding.js']
+        }
       }
     }
   });
@@ -32,8 +40,10 @@ module.exports = function(grunt) {
   grunt.loadTasks('../tools/tasks');
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('default', 'concat');
+  grunt.registerTask('default', 'uglify');
   grunt.registerTask('test', ['override-chrome-launcher', 'karma:TemplateBinding']);
   grunt.registerTask('test-buildbot', ['override-chrome-launcher', 'karma:buildbot']);
 };
